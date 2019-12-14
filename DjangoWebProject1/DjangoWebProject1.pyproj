@@ -4,6 +4,7 @@
     <Name>DjangoWebProject1</Name>
     <RootNamespace>DjangoWebProject1</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,6 +31,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HelloDjangpApp\admin.py" />
+    <Compile Include="HelloDjangpApp\apps.py" />
+    <Compile Include="HelloDjangpApp\migrations\__init__.py" />
+    <Compile Include="HelloDjangpApp\models.py" />
+    <Compile Include="HelloDjangpApp\tests.py" />
+    <Compile Include="HelloDjangpApp\views.py" />
+    <Compile Include="HelloDjangpApp\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="DjangoWebProject1\__init__.py" />
     <Compile Include="DjangoWebProject1\settings.py" />
@@ -37,10 +45,15 @@
     <Compile Include="DjangoWebProject1\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HelloDjangpApp\templates\HelloDjangpApp\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DjangoWebProject1\" />
+    <Folder Include="HelloDjangpApp\" />
+    <Folder Include="HelloDjangpApp\migrations\" />
+    <Folder Include="HelloDjangpApp\templates\" />
+    <Folder Include="HelloDjangpApp\templates\HelloDjangpApp\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
